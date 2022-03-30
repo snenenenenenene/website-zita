@@ -1,84 +1,102 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Tangerine:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap");
 
 body {
-    background-color: #F6F6F6;
-    color: #373745;
-    font-family: 'Rubik', serif;
+  background-color: #f6f6f6;
+  color: #373745;
+  font-family: "Rubik", serif;
 }
 
 .fancy-text {
-    font-family: 'Yeseva One', cursive;
-     /* font-family: 'Cormorant Garamond', serif; */
-    text-transform: initial;
+  font-family: "Yeseva One", cursive;
+  /* font-family: 'Cormorant Garamond', serif; */
+  text-transform: initial;
 }
 
 .line::after {
-     content: '';
-     position: absolute;
-     top: 40%;
-     width: 100%;
-     height: 2px;
-     background-color: black;
+  content: "";
+  position: absolute;
+  top: 40%;
+  width: 100%;
+  height: 2px;
+  background-color: black;
 }
 
 @layer utilities {
-    .bg-growing-underline {
-      background-size: 100% 0em;
-      background-position: 0 100%;
-      @apply bg-no-repeat transition-all duration-300;
-    }
-    .bg-growing-underline:hover {
-      background-size: 100% 100%;
-    }
-    .bg-growing-underline:focus {
-      background-size: 100% 100%;
-    }
+  .bg-growing-underline {
+    background-size: 100% 0em;
+    background-position: 0 100%;
+    @apply bg-no-repeat transition-all duration-300;
   }
-
-  ::-moz-selection { /* Code for Firefox */
-    color: #F6F6F6;
-    background: #373745;
+  .bg-growing-underline:hover {
+    background-size: 100% 100%;
   }
-
-  ::selection {
-    color: #F6F6F6;
-    background: #373745;
+  .bg-growing-underline:focus {
+    background-size: 100% 100%;
   }
+}
 
+::-moz-selection {
+  /* Code for Firefox */
+  color: #f6f6f6;
+  background: #373745;
+}
+
+::selection {
+  color: #f6f6f6;
+  background: #373745;
+}
 
 .fadeIn {
-    animation: 0.5s fadeIn forwards;
-  }
+  animation: 0.5s fadeIn forwards;
+}
 
-  .fadeOut {
-    animation: 0.5s fadeOut forwards;
-  }
+.fadeOut {
+  animation: 0.5s fadeOut forwards;
+}
 
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translate(-20px, 0);
-    }
-    to {
-      opacity: 1;
-      transform: translate(0px, 0px);
-    }
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-20px, 0);
   }
+  to {
+    opacity: 1;
+    transform: translate(0px, 0px);
+  }
+}
 
-  @keyframes fadeOut {
-    from {
-      opacity: 1;
-      transform: translate(0px, 0px);
-    }
-    to {
-      transform: translate(-20px, 0);
-      opacity: 0;
-    }
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translate(0px, 0px);
   }
+  to {
+    transform: translate(-20px, 0);
+    opacity: 0;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  background: #00000000;
+}
+
+::-webkit-scrollbar-track {
+  background: #00000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #373745;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000;
+}
