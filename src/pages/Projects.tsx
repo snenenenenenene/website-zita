@@ -8,7 +8,7 @@ export const ProjectItem = ({ title, image, type, searchQuery }: any) => {
         scale: 1.2,
         transition: { duration: 0.1 },
       }}
-      className={`w-72 h-72 sm:w-64 sm:h-64 m-2 overflow-hidden shadow-md bg-white relative ${
+      className={`w-72 h-72 sm:w-64 mx-auto sm:h-64 m-2 overflow-hidden shadow-md bg-white relative ${
         searchQuery !== "" && !type.includes(searchQuery) ? "hidden" : "visible"
       }`}
     >
@@ -26,7 +26,7 @@ export const Projects = () => {
   const [searchQuery, setSearchQuery] = useState<string>("");
 
   return (
-    <div className="px-20 py-10 mt-10 flex flex-col h-full">
+    <div className="md:px-20 px-0 py-10 mt-10 flex flex-col h-full">
       <header className="flex sm:flex-row flex-col ">
         <h1 className="fancy-text  text-[76px] leading-[63px]">Projects</h1>
         <input
@@ -38,7 +38,7 @@ export const Projects = () => {
       <motion.div
         initial={{ y: "100px", opacity: 0 }}
         animate={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
-        className="w-auto grid md:grid-cols-4 grid-cols-1 mt-5 gap-4 mx-auto"
+        className="grid md:grid-cols-4 grid-cols-1 mt-5 gap-4"
       >
         {projects.map((project): any => (
           <ProjectItem

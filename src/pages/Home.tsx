@@ -3,7 +3,7 @@ import { Button } from "../components/Button";
 
 export const Home = () => {
   return (
-    <div className="md:p-20 p-12 mt-10 -mb-20 md:w-full overflow-hidden w-screen flex flex-col">
+    <div className="md:p-20 px-2 py-10 mt-10 -mb-20 md:w-full overflow-hidden w-screen flex flex-col">
       <header className="fancy-text z-0 md:text-[76px] text-[3rem] flex md:flex-row flex-col leading-[63px]">
         <div className="w-[90%]">
           <h1>Freelance</h1>

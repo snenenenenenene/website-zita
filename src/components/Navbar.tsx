@@ -5,8 +5,10 @@ export const Navbar = () => {
   const [isPressed, setIsPressed] = useState(false);
   const NavItem = ({ title, href }: any) => {
     return (
-      <li className="bg-gradient-to-r px-4 hover:text-white cursor-pointer p-2 from-black to-black bg-growing-underline">
-        <a href={href}>{title}</a>
+      <li className="bg-gradient-to-r px-4 hover:text-white cursor-pointer p-2 from-black to-black sm:w-auto flex w-full bg-growing-underline">
+        <a className="w-full sm:w-auto" href={href}>
+          {title}
+        </a>
       </li>
     );
   };
@@ -39,7 +41,7 @@ export const Navbar = () => {
           <li className="line md:visible invisible relative w-5 mx-5"></li>
           <NavItem title={"Projects"} href={"/projects"} />
         </ul>
-        <h1 className="fancy-text visible p-8 md:relative absolute right-0 top-0 cursor-progress hover:animate-bounce text-[26px] leading-[21px] font-bold">
+        <h1 className="fancy-text visible p-6 md:relative absolute right-0 top-0 cursor-progress hover:animate-bounce text-[20px] sm:text-[26px] leading-[21px] font-bold">
           Zita Celis
         </h1>
         <ul className="flex flex-col md:flex-row relative">
