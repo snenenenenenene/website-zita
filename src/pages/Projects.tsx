@@ -38,7 +38,7 @@ export const Projects = () => {
       <motion.div
         initial={{ y: "100px", opacity: 0 }}
         animate={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
-        className="grid md:grid-cols-4 grid-cols-1 mt-5 gap-4"
+        className="grid md:grid-cols-4 sm:grid-cols-3 sm:gap-2 grid-cols-1 mt-5 gap-4"
       >
         {projects.map((project): any => (
           <ProjectItem
