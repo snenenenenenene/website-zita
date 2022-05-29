@@ -39,9 +39,9 @@ export const Navbar = () => {
         <ul className="flex md:pt-0 pt-8 flex-col md:flex-row relative">
           <NavItem title={"About Me"} href={"/"} />
           <li className="line md:visible invisible relative w-5 mx-5"></li>
-          <NavItem title={"Projects"} href={"/projects"} />
+          <NavItem title={"My Work"} href={"/my-work"} />
         </ul>
-        <h1 className="fancy-text visible p-6 md:relative absolute right-0 top-0 cursor-progress hover:animate-bounce text-[20px] sm:text-[26px] leading-[21px] font-bold">
+        <h1 className="fancy-text cursor-default visible p-6 md:relative absolute right-0 top-0 text-[20px] sm:text-[26px] leading-[21px] font-bold">
           Zita Celis
         </h1>
         <ul className="flex flex-col md:flex-row relative">

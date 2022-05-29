@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "../components/Button";
-
+import image from "../assets/pictures/IMG_3783.jpg";
 export const Home = () => {
   return (
     <div className="md:p-20 px-2 py-10 mt-10 -mb-20 md:w-full overflow-hidden w-screen flex flex-col">
@@ -22,21 +22,18 @@ export const Home = () => {
         className="flex md:flex-row flex-col h-full mt-5 overflow-hidden"
       >
         <div className="md:w-[40%] md:min-w-[40%] md:max-w-[40%] w-full text-[1rem] md:mx-10 leading-[38px] text-justify uppercase">
-          &emsp; &emsp; Lorem ipsum dolor sit, amet consectetur adipisicing
-          elit. Hic minima tempora voluptatum debitis, doloribus cumque
-          laboriosam odio, sed nam consequuntur nesciunt aut?
-          <br />
-          <br />
-          Ipsa illo nobis, perspiciatis impedit vel explicabo reiciendis
-          deserunt iusto mollitia. Asperiores dolores libero alias pariatur.
-          Ducimus excepturi assumenda itaque necessitatibus quasi
+          &emsp; &emsp; Find out more about me by clicking on "My Resume" or by
+          looking at my work.
+          <br></br>
+          <br></br>
+          Want to contact me? <b>Go to my instagram or linkedin!</b>
         </div>
-        <div className="md:w-[60%] md:min-w-[50%] w-full md:-my-10 h-[450px] overflow-hidden">
+        <div className="md:w-[60%] md:min-w-[50%] rounded-lg w-full md:-my-10 h-[450px] overflow-hidden">
           <motion.img
             initial={{ x: "300px", opacity: 0 }}
             animate={{ x: "0", opacity: 1, transition: { duration: 1.5 } }}
-            className="w-full h-full object-cover"
-            src="https://media-exp1.licdn.com/dms/image/C4E16AQET6ZYu6EaW5g/profile-displaybackgroundimage-shrink_350_1400/0/1645964406739?e=1653523200&v=beta&t=kX3BcN3JF7l6tCz7wntktOtjBSxXhzp8t5HpF4cCysk"
+            className="w-full h-full object-cover rounded-lg"
+            src={image}
           />
         </div>
       </motion.div>

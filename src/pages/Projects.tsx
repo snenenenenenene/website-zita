@@ -5,10 +5,10 @@ export const ProjectItem = ({ title, image, type, searchQuery }: any) => {
   return (
     <motion.div
       whileHover={{
-        scale: 1.2,
+        scale: 1.05,
         transition: { duration: 0.1 },
       }}
-      className={`w-72 h-72 sm:w-64 mx-auto sm:h-64 m-2 overflow-hidden shadow-md bg-white relative ${
+      className={`w-72 h-72 sm:w-64 mx-auto rounded sm:h-64 overflow-hidden shadow-md bg-white relative ${
         searchQuery !== "" && !type.includes(searchQuery) ? "hidden" : "visible"
       }`}
     >
@@ -27,18 +27,21 @@ export const Projects = () => {
 
   return (
     <div className="md:px-20 px-0 py-10 mt-10 flex flex-col h-full">
-      <header className="flex sm:flex-row flex-col ">
-        <h1 className="fancy-text  text-[76px] leading-[63px]">Projects</h1>
-        <input
-          className="sm:w-[35%] w-full sm:my-0 mt-4  mx-10 ml-auto px-8 uppercase  outline-black"
-          placeholder="Search..."
-          onChange={(e) => setSearchQuery(e.target.value)}
-        />
+      <header className="flex sm:flex-row flex-col items-center">
+        <h1 className="fancy-text  text-[76px] leading-[63px]">My Work</h1>
+        <div className="flex items-center border-b border-black sm:ml-auto w-64 mx-auto sm:mx-0 py-2">
+          <input
+            className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 uppercase px-2 leading-tight focus:outline-none"
+            type="text"
+            placeholder="Search..."
+            onChange={(e) => setSearchQuery(e.target.value)}
+          ></input>
+        </div>
       </header>
       <motion.div
         initial={{ y: "100px", opacity: 0 }}
         animate={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
-        className="grid lg:grid-cols-4 md:grid-cols-3 md:gap-2 grid-cols-1 mt-5 gap-4"
+        className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 grid-cols-1 mt-5 gap-5"
       >
         {projects.map((project): any => (
           <ProjectItem
